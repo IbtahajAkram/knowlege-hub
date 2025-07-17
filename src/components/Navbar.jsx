@@ -73,7 +73,7 @@ const handleGetToken = async () => {
               <Link href="/">Home</Link>
               <Link href="/courses">Courses</Link>
               <Link href="/team-hub/files">Documents</Link>
-              <Link href="/contact">Contact</Link>
+              <Link href="/video-chat">Video Chat</Link>
               <Link href="/team-hub">Team collaboration</Link>
               <Link href="/pricing">Pricing</Link>
 

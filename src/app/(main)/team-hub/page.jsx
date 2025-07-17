@@ -3,6 +3,7 @@ import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { FileArchiveIcon, Send, SendHorizonal, Upload } from "lucide-react";
+import axiosInstance from "@/utils/axiosInstance";
 
 export default function Home() {
   const [messages, setMessages] = useState([]);
@@ -24,8 +25,8 @@ export default function Home() {
   }, []);
 
   const fetchMessages = async () => {
-    const res = await axios.get("https://a69094484e04.ngrok-free.appmessages");
-    setMessages(res.data);
+    const res = await axiosInstance.get("/messages");
+    setMessages(res?.data);
     scrollToBottom();
   };
 
@@ -35,7 +36,7 @@ export default function Home() {
 
   const sendMessage = async () => {
     if (!message) return;
-    await axios.post("https://a69094484e04.ngrok-free.appmessage", { user, message });
+    await axiosInstance.post("/message", { user, message });
     setMessage("");
     fetchMessages();
   };
@@ -45,7 +46,7 @@ export default function Home() {
     const form = new FormData();
     form.append("file", file);
     form.append("user", user);
-    await axios.post("https://a69094484e04.ngrok-free.appupload", form);
+    await axiosInstance.post("/upload", form);
     setFile(null);
     filesUplaods.current.value = null;
     fetchMessages();
@@ -59,10 +60,10 @@ export default function Home() {
          Welcome to Chat Room
         </h1>
                 <div className="h-96 overflow-y-auto bg-gray-50 border border-gray-200 rounded-xl p-4 space-y-4 mb-6 shadow-inner">
-          {messages.length === 0 ? (
+          {messages?.length === 0 ? (
             <p className="text-gray-400 italic text-center">Start the conversation 💬</p>
           ) : (
-            messages.map((msg) => (
+            messages?.map((msg) => (
               <div
                 key={msg.id}
                 className={`flex flex-col ${msg.user === user ? "items-end" : "items-start"}`}
@@ -74,7 +75,7 @@ export default function Home() {
                       <span>{msg.message}</span>
                     ) : (
                       <a
-                        href={`https://a69094484e04.ngrok-free.app${msg.fileUrl}`}
+                        href={`https://18ac272e173f.ngrok-free.app/${msg.fileUrl}`}
                         target="_blank"
                         rel="noreferrer"
                         className="text-blue-600 flex mt-2 gap-[5px] "

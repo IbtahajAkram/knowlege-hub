@@ -3,7 +3,7 @@
 //   import { Video, VideoOff, Phone, PhoneOff, Mic, MicOff, Settings, Users, Wifi, WifiOff } from 'lucide-react';
 //   import io from "socket.io-client";
 
-//   const socket = io("https://a69094484e04.ngrok-free.app");
+//   const socket = io("https://18ac272e173f.ngrok-free.app/");
 
 //   export default function App() {
 //     const localVideoRef = useRef(null);
