@@ -7,7 +7,7 @@ import { getUserRole } from '../../../utils/axiosInstance';
 export default function Navbar() {
   const role = getUserRole();
   const router = useRouter();
-
+// ......
   const handleLogout = () => {
     localStorage.clear();
     router.push('/login');
