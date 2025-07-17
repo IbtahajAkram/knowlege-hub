@@ -1,0 +1,37 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@clerk/nextjs": "6.12.5",
+    "@stripe/stripe-js": "^7.3.1",
+    "axios": "^1.9.0",
+    "js-cookie": "^3.0.5",
+    "lottie-react": "^2.4.1",
+    "lucide-react": "^0.511.0",
+    "next": "15.3.2",
+    "plyr-react": "^5.3.0",
+    "prop-types": "^15.8.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-toastify": "^11.0.5",
+    "socket.io-client": "^4.8.1",
+    "stripe": "^18.2.1",
+    "swiper": "^11.2.7",
+    "use-places-autocomplete": "^4.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
