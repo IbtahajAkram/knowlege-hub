@@ -375,7 +375,7 @@ import { useEffect, useRef, useState } from "react";
 import { Video, VideoOff, Phone, PhoneOff, Mic, MicOff, Settings, Users, Wifi, WifiOff } from 'lucide-react';
 import io from "socket.io-client";
 
-const socket = io("https://a69094484e04.ngrok-free.app", {
+const socket = io("https://d6596a59d99d.ngrok-free.app", {
         transports: ["websocket"],
         secure: true,
         forceNew: true,

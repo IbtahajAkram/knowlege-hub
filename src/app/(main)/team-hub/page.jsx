@@ -24,7 +24,7 @@ export default function Home() {
   }, []);
 
   const fetchMessages = async () => {
-    const res = await axios.get("http://localhost:5000/messages");
+    const res = await axios.get("https://a69094484e04.ngrok-free.appmessages");
     setMessages(res.data);
     scrollToBottom();
   };
@@ -35,7 +35,7 @@ export default function Home() {
 
   const sendMessage = async () => {
     if (!message) return;
-    await axios.post("http://localhost:5000/message", { user, message });
+    await axios.post("https://a69094484e04.ngrok-free.appmessage", { user, message });
     setMessage("");
     fetchMessages();
   };
@@ -45,7 +45,7 @@ export default function Home() {
     const form = new FormData();
     form.append("file", file);
     form.append("user", user);
-    await axios.post("http://localhost:5000/upload", form);
+    await axios.post("https://a69094484e04.ngrok-free.appupload", form);
     setFile(null);
     filesUplaods.current.value = null;
     fetchMessages();
@@ -74,7 +74,7 @@ export default function Home() {
                       <span>{msg.message}</span>
                     ) : (
                       <a
-                        href={`http://localhost:5000${msg.fileUrl}`}
+                        href={`https://a69094484e04.ngrok-free.app${msg.fileUrl}`}
                         target="_blank"
                         rel="noreferrer"
                         className="text-blue-600 flex mt-2 gap-[5px] "

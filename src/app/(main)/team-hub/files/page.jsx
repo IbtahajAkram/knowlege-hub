@@ -7,7 +7,7 @@ const FilesPage = () => {
   const [files, setFiles] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/messages").then((res) => {
+    axios.get("https://a69094484e04.ngrok-free.appmessages").then((res) => {
       const fileOnly = res.data.filter((m) => m.fileUrl);
       setFiles(fileOnly);
     });
@@ -51,7 +51,7 @@ const FilesPage = () => {
                 </p>
 
                 <a
-                  href={`http://localhost:5000${m.fileUrl}`}
+                  href={`https://a69094484e04.ngrok-free.app${m.fileUrl}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block w-full text-center text-sm font-medium px-4 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
