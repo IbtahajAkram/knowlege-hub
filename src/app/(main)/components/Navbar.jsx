@@ -12,7 +12,8 @@ export default function Navbar() {
     localStorage.clear();
     router.push('/login');
   };
-
+// ..gggggggg
+// ...
   return (
     <nav className="bg-blue-600 p-4 text-white flex justify-between">
       <div className="space-x-4">
