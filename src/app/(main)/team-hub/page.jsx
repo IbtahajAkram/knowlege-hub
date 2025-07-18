@@ -75,7 +75,7 @@ export default function Home() {
                       <span>{msg.message}</span>
                     ) : (
                       <a
-                        href={`https://18ac272e173f.ngrok-free.app/${msg.fileUrl}`}
+                        href={`https://94293107e087.ngrok-free.app/${msg.fileUrl}`}
                         target="_blank"
                         rel="noreferrer"
                         className="text-blue-600 flex mt-2 gap-[5px] "
