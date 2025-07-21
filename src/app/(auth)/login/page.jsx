@@ -55,11 +55,7 @@ useEffect(() => {
         toast.success("Login successful");
          const token = await getToken({ template: "skills" }); // 👈 template name must match
       console.log("✅ JWT Token:", token);
-<<<<<<< HEAD
-         router.push("/courses");
-=======
         router.push("/courses");
->>>>>>> 5ae616b (done chat bot)
       } catch (err) {
         const msg = err?.response?.data?.message || err.message;
         if (msg === "User already exists") {
