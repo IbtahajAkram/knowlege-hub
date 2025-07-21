@@ -22,8 +22,8 @@ console.log(getToken,userId,"userId",sessionClaims,"session claim",sessionId,"it
     try {
       const res = await axiosInstance.post("/api/auth/login", { email });
       localStorage.setItem("token", res.data.accessToken);
+     router.push("/courses");
       toast.success(res?.data?.message || "Login successful!");
-      router.push("/courses");
     } catch (err) {
       // const msg = err?.response?.data?.message || err.message;
       setError(msg);
@@ -55,7 +55,11 @@ useEffect(() => {
         toast.success("Login successful");
          const token = await getToken({ template: "skills" }); // 👈 template name must match
       console.log("✅ JWT Token:", token);
+<<<<<<< HEAD
          router.push("/courses");
+=======
+        router.push("/courses");
+>>>>>>> 5ae616b (done chat bot)
       } catch (err) {
         const msg = err?.response?.data?.message || err.message;
         if (msg === "User already exists") {
