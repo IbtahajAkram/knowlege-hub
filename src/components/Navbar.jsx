@@ -67,7 +67,7 @@ const handleGetToken = async () => {
                 </span>
               </Link>
             </div>
-{/* .... */}
+{/* ... */}
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-6">
               <Link href="/">Home</Link>
