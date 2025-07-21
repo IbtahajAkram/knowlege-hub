@@ -68,11 +68,7 @@ export default function Home() {
                 key={msg.id}
                 className={`flex flex-col ${msg.user === user ? "items-end" : "items-start"}`}
               >
-<<<<<<< HEAD
-                <div className={`rounded-2xl px-5 py-2 text-sm shadow-md max-w-max ${msg.user === user ? "bg-blue-100 text-left text-blue-800" : "bg-green-100 text-left text-green-800"}`}>
-=======
                 <div className={`rounded-2xl px-5 py-2 text-sm shadow-md max-w-lg ${msg.user === user ? "bg-blue-100 text-left text-blue-800" : "bg-green-100 text-left text-green-800"}`}>
->>>>>>> 5ae616b (done chat bot)
                   <strong>{msg.user}</strong>
                   <div>
                     {msg.message ? (

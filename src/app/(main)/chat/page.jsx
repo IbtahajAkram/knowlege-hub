@@ -20,7 +20,7 @@ const Chatbot = () => {
     const botIndex = messages.length + 1;
 
     try {
-      const response = await fetch("https://eaa96d7f64c0.ngrok-free.app/ai/chat-stream", {
+      const response = await fetch("https://be0eec1b25bf.ngrok-free.app/ai/chat-stream", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input }),
